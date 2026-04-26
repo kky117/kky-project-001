@@ -1,5 +1,15 @@
 import streamlit as st
 from openai import OpenAI
+import streamlit as st
+# 隐藏 Streamlit 默认的多余元素
+st.markdown("""
+    <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+        .css-1v0mbdj.e1tzin5v0 {visibility: hidden;}
+    </style>
+""", unsafe_allow_html=True)
 
 # ====================== 你的配置 ======================
 API_KEY = "sk-6e63568d256f4d0e932b7cbadc91cf86"
