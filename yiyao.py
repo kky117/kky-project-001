@@ -1,14 +1,34 @@
+
 import streamlit as st
+st.set_page_config(
+    page_title="医药助手",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
 from openai import OpenAI
-import streamlit as st
 # 隐藏 Streamlit 默认的多余元素
 st.markdown("""
     <style>
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-        header {visibility: hidden;}
-        .css-1v0mbdj.e1tzin5v0, .stActionButton {visibility: hidden !important;}
-        .block-container {padding-top: 1rem; padding-bottom: 0rem;}
+        /* 隐藏右上角汉堡菜单 */
+        #MainMenu {visibility: hidden !important;}
+        /* 隐藏底部版权信息 */
+        footer {visibility: hidden !important;}
+        /* 隐藏顶部导航栏 */
+        header[data-testid="stHeader"] {display: none !important;}
+        /* 隐藏右下角所有按钮（头像、分享、Fork） */
+        .stActionButton, .viewerBadge_container__1QSob, .css-1v0mbdj.e1tzin5v0 {
+            visibility: hidden !important;
+            display: none !important;
+        }
+        /* 隐藏页面顶部的空白边距 */
+        .block-container {
+            padding-top: 0rem !important;
+            padding-bottom: 0rem !important;
+            padding-left: 0rem !important;
+            padding-right: 0rem !important;
+        }
+        /* 隐藏侧边栏 */
+        .stSidebar {display: none !important;}
     </style>
 """, unsafe_allow_html=True)
 # ====================== 你的配置 ======================
