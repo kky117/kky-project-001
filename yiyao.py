@@ -7,10 +7,10 @@ st.markdown("""
         #MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
         header {visibility: hidden;}
-        .css-1v0mbdj.e1tzin5v0 {visibility: hidden;}
+        .css-1v0mbdj.e1tzin5v0, .stActionButton {visibility: hidden !important;}
+        .block-container {padding-top: 1rem; padding-bottom: 0rem;}
     </style>
 """, unsafe_allow_html=True)
-
 # ====================== 你的配置 ======================
 API_KEY = "sk-6e63568d256f4d0e932b7cbadc91cf86"
 # ======================================================
